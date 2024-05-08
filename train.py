@@ -30,30 +30,6 @@ np.random.seed(2022)
 # torch.backends.cudnn.enabled = True
 # torch.backends.cudnn.benchmark = True
 import spacy
-# nlp = spacy.load('en_core_web_sm')
-# max_len = 49
-# def get_interests(caption):
-#     interests = []
-#     for c in caption:
-#         c = " ".join(c)
-#         doc = nlp(c)
-#         properties = []
-#         for p in doc:
-#             if p.pos_ == "NOUN":
-#                 num = text_field.vocab.stoi[p.text]
-#                 if isinstance(num,list):
-#                     properties(*num)
-#                 else:
-#                     properties.append(num)
-#         _len = max_len - len(properties)
-#         if _len >= 0:
-#             for _ in range(_len):
-#                 properties.append(0)
-#         else:
-#             properties = properties[:max_len]
-#         interests.append(properties)
-        
-#     return torch.tensor(interests)
 
 def evaluate_loss(model, dataloader, poly_loss, text_field):
     # Validation loss
